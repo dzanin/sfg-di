@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
  * Created by dz on 18/02/21.
  */
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class ConstructorInjectedGreetingServiceImpl implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello World";
+        return "Hello World - Constructor";
     }
 }
