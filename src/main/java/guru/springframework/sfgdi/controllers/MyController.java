@@ -1,5 +1,6 @@
 package guru.springframework.sfgdi.controllers;
 
+import guru.springframework.sfgdi.services.GreetingService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 
@@ -9,10 +10,15 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MyController {
 
+    private final GreetingService greetingService;
+
+    // No qualifiers here for greetingService, with multiple choise choose the primary
+    public MyController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
     public String sayHello ()
     {
-        System.out.println("Hello World!!");
-
-        return "Hi Folks!";
+        return greetingService.sayGreeting();
     }
 }
