@@ -1,13 +1,12 @@
-package guru.springframework.sfgdi;
+package guru.springframework;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
-import guru.springframework.sfgdi.controllers.*;
+import guru.springframework.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = {"guru.springframework.sfgdi","com.springframework.pets"})
+@ComponentScan(basePackages = {"guru.springframework", "guru.springframework.pets"})
 @SpringBootApplication
 public class SfgDiApplication {
 

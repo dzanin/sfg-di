@@ -1,4 +1,4 @@
-package guru.springframework.sfgdi.services;
+package guru.springframework.services;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
  * Created by dz on 21/02/21.
  */
 //If multiple service use application.properties to set active profile
-@Profile("EN")
+@Profile({"ES", "default"})
 @Service("i18nService")
-public class I18nEnglishGreetingService implements GreetingService {
+public class I18nSpanishGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello World - EN";
+        return "Hola Mundo - ES";
     }
 }
